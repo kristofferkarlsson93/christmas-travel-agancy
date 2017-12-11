@@ -6,3 +6,19 @@ body {
     background-size: cover;
     overflow-x: hidden
 }
+
+.heading-info {
+    position: absolute;
+    top: 15%;
+    left: 25%
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.main-content {
+    display: none;
+}
