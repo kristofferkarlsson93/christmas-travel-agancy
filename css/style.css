@@ -1,10 +1,14 @@
 body { 
-    background: url('../images/starter-background.JPG') no-repeat center center fixed; 
+    /*background: url('../images/starter-background.JPG') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow-x: hidden
+    overflow-x: hidden*/
+}
+
+.login-container {
+    display: none; /*ta bort sen*/
 }
 
 .heading-info {
@@ -20,5 +24,32 @@ body {
 }
 
 .main-content {
-    display: none;
+    display: block; /*Ska vara none från början*/
+    padding: 0px;
+}
+
+.travel-heading {
+    text-align: center;
+    background: url('../images/travel.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 75vh;
+}
+
+.travel-heading-text-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.travel-heading-text {
+    color: #ffffff;
+    opacity: 1;
+    padding-top: 15%;
+    padding-bottom: 15%;
 }
