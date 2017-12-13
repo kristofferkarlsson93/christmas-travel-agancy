@@ -1,5 +1,6 @@
 window.onload = () => {
     initEvents();
+    checkScreenWidth();
 }
 
 const initEvents = () => {
@@ -17,4 +18,15 @@ const initEvents = () => {
         }
         return false;
     });
+}
+
+
+const checkScreenWidth = () => {
+    if (window.innerWidth <= 481) {
+        console.log("small");
+        document.body.querySelector('.why-chose-heading').classList.remove('col-md-4')
+        document.body.querySelector('.why-img').classList.remove('col-md-8')
+        document.body.querySelector('.why-img').style.display = 'none';
+
+    }
 }
