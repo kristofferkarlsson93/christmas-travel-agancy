@@ -20,6 +20,7 @@ p {
     font-size: 1.5em;
 }
 
+
 .login-container {
     display: none; /*ta bort sen*/
 }
@@ -98,6 +99,15 @@ p {
 .why-chose-heading-text {
     color: #ffffff;    
     opacity: 1;
+}
+
+
+.activity-list {
+    padding-left: 15%;
+}
+
+.activity-item {
+    font-size: 1.3em;
 }
 
 
