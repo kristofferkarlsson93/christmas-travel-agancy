@@ -82,13 +82,16 @@ p {
 .travel-img {
     max-height: 600px;
     width: 100%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-       
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);      
 }
 
 .img-container {
     padding: 1%;
     padding-left: 2%;
+}
+
+.board-img {
+   max-height: 200px;
 }
 
 .why-chose {
@@ -123,11 +126,18 @@ p {
     .heading-img {
         height: 100vh;
     }
+    .img-container {
+        padding: 0%;
+    }
+    
 }
 
 @media screen and (min-width: 359px) {
     
     .travel-heading-text {
         padding: 1%;
+    }
+    .img-container {
+        padding: 0%;
     }
 }
