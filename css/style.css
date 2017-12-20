@@ -94,6 +94,12 @@ p {
    max-height: 200px;
 }
 
+.board-img:hover {
+    background-color: #6D4C41;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    opacity: 0.8;
+}
+
 .why-chose {
     background-color: #4290D0;
 }
