@@ -40,3 +40,10 @@ const changeOrderToLookGoodOnMobile = () => {
 		console.log(imagesToChange);
 	}
 }
+
+
+/*
+<div class="spacer row">
+            <div class="col-md-12">Stoppa in en bild-boarder här!</div>
+          </div>
+*/
