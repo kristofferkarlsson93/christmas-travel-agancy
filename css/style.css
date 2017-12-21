@@ -188,6 +188,9 @@ a {
         border-bottom: 5px solid;
         border-color: #4290D0!important;
     }
+    .login-container {
+        height: 100vh;
+    }
     .login-form {
         left: 38%;
     }

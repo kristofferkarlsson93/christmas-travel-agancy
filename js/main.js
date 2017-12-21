@@ -10,7 +10,7 @@ const initEvents = () => {
 	form.addEventListener('submit', e => {
 		e.preventDefault();
 		const value = form.input.value.toLowerCase();
-		if (value === "väl inslaget") {
+		if (value === "väl inslaget" || value === 'väl inslagen') {
 			document.body.querySelector('.login-container').style.display = 'none';
 			document.body.style.background = "none";
 			document.body.querySelector('.main-content').style.display = 'block';
