@@ -1,7 +1,8 @@
 window.onload = () => {
 	initEvents();
-	checkScreenWidth();
-	//changeOrderToLookGoodOnMobile();
+	removeUnwantedElementOnSmallScreen();
+	controlImgFlipper();
+	removeShakeOnSmallScreens();
 }
 
 const initEvents = () => {
@@ -9,10 +10,11 @@ const initEvents = () => {
 	form.addEventListener('submit', e => {
 		e.preventDefault();
 		const value = form.input.value.toLowerCase();
-		if (value === "rätt svar") {
+		if (value === "väl inslaget") {
 			document.body.querySelector('.login-container').style.display = 'none';
 			document.body.style.background = "none";
 			document.body.querySelector('.main-content').style.display = 'block';
+			document.body.querySelector('.travel-heading').style.animation = '1s ease-out 0s 1 dropHeader';
 		} else {
 			form.input.classList.add('is-invalid');
 			form.input.style.backgroundColor = "#fc8585";
@@ -21,8 +23,7 @@ const initEvents = () => {
 	});
 }
 
-
-const checkScreenWidth = () => {
+const removeUnwantedElementOnSmallScreen = () => {
 	if (window.innerWidth <= 481) {
 		console.log("small");
 		document.body.querySelector('.why-chose-heading').classList.remove('col-md-4')
@@ -31,19 +32,24 @@ const checkScreenWidth = () => {
 	}
 }
 
-const changeOrderToLookGoodOnMobile = () => {
-	if (true) {
-		const imagesToChange = document.body.querySelectorAll('.should-refurnish-img');
-		const contentToChange = document.body.querySelectorAll('.should-refurnish-text-content');
-		[].forEach.call(imagesToChange, (element) => element.classList.add('push-md-4'));
-		[].forEach.call(contentToChange, (element) => element.classList.add('pull-md-8'));
-		console.log(imagesToChange);
-	}
+
+const controlImgFlipper = () => {
+	const thumbnails = document.body.querySelectorAll('.img-thumbnail');
+	[].forEach.call(thumbnails, (thumbnail) => {
+		thumbnail.addEventListener('click', e => {
+			const mainImgRef = thumbnail.parentElement.getAttribute('mainImg');
+			const mainImg = document.body.querySelector('#' + mainImgRef);
+			const tempSrcStore = mainImg.src;
+			mainImg.src = thumbnail.src;
+			thumbnail.src = tempSrcStore;
+		});
+	});
 }
 
-
-/*
-<div class="spacer row">
-            <div class="col-md-12">Stoppa in en bild-boarder här!</div>
-          </div>
-*/
+const removeShakeOnSmallScreens = () => {
+	if (window.innerWidth <= 481) {
+		const classesToRemove = ['shake-slow', 'shake-freeze'];
+		const shakableElements = document.body.querySelectorAll('.shake-slow');
+		[].forEach.call( shakableElements, (element => element.classList.remove(...classesToRemove)) );
+	}
+}

@@ -1,9 +1,18 @@
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 body { 
-    /*background: url('../images/starter-background.JPG') no-repeat center center fixed; 
+    background: url('../images/starter-background.JPG') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;*/
+    background-size: cover;
     overflow-x: hidden;
     background-color: #4290D0;    
     color: #ffffff;
@@ -20,15 +29,19 @@ p {
     font-size: 1.5em;
 }
 
+a {
+    color: pink;
+}
+
 
 .login-container {
-    display: none; /*ta bort sen*/
 }
 
 .heading-info {
     position: absolute;
     top: 15%;
-    left: 25%
+    left: 25%;
+    text-align: center;
 }
 
 .login-form {
@@ -40,7 +53,8 @@ p {
 /*====================================================================================================*/
 
 .main-content {
-    display: block; /*Ska vara none från början*/
+    display: none; /*Ska vara none från början*/
+    background-color: #4290D0;      
 }
 
 .content {
@@ -50,17 +64,16 @@ p {
 
 .travel-heading {
     text-align: center;
-   /* background: url('../images/travel.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    overflow-x: hidden;*/   
+    
 }
 
 .heading-img {
     width: 100%;
-    height: auto;
+    height: 99vh;
+}
+
+.travel-alt {
+    padding-top: 5%;
 }
 
 .travel-heading-text-container {
@@ -77,17 +90,22 @@ p {
     opacity: 1;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 .travel-img {
     max-height: 600px;
     width: 100%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);      
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 0 auto;
 }
 
 .img-container {
     padding: 1%;
     padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .board-img {
@@ -95,7 +113,7 @@ p {
 }
 
 .board-img:hover {
-    background-color: #6D4C41;
+    background-color: pink;
     box-shadow: 0 10px 15px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
     opacity: 0.8;
 }
@@ -126,19 +144,56 @@ p {
     font-size: 1.3em;
 }
 
+.footer {
+    margin-top: 20%;
+    padding-top: 10%;
+    padding-right: 0%;
+    width: 100vw;
+    background-color: #5EE1AC;    
+}
+
+.director {
+    margin: 0;
+    max-height: 100%;
+}
 
 
-@media screen and (min-width: 480px) {
+
+@media screen and (max-width: 480px) {
+
+    .heading-info {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        margin: 0 auto;
+        margin-left: 5%;
+    }
+
+    .heading-info h1 {
+        font-size: 2.1em;
+    }
+    .heading-info h3 {
+        font-size: 1.7em
+    }
     .heading-img {
-        height: 100vh;
+        height: 90vh;
     }
     .img-container {
         padding: 0%;
     }
-    
+    .img-board-container {
+        padding-bottom: 15%;
+        background-color: white;
+        
+        border-bottom: 5px solid;
+        border-color: #4290D0!important;
+    }
+    .login-form {
+        left: 38%;
+    }
 }
 
-@media screen and (min-width: 359px) {
+@media screen and (max-width: 359px) {
     
     .travel-heading-text {
         padding: 1%;
@@ -146,4 +201,6 @@ p {
     .img-container {
         padding: 0%;
     }
+
+   
 }

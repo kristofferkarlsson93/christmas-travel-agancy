@@ -1,23 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <title>Logga in</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">		
+    <link rel="stylesheet" href="./css/csshake-slow.min.css">	
+    
     <script src="./js/main.js"></script>
   </head>
   <body>
 
 		<div class="container-fluid login-container">
-      <div class="heading-info">
-        <h1>Välkommen till din julklapp och födelsedagspressent!</h1>
-        <h3>Logga in med lösenordet som du knäcker med hjälp av ordpusslet i kuvertet</h3>
+      <div class="heading-info row text-center">
+        <h1>Välkommen till din julklapp!</h1>
+        <h3>Logga in med lösenordet som du knäcker med hjälp av ordpusslet i kuvert nummer 2</h3>
       </div>
-      <form class="form-inline login-form">
+      <form class="form-inline login-form row">
         <div class="form-group mx-sm-3">
           <input type="password" name="input" class="form-control" id="inputPassword2" placeholder="Lösenord">
         </div>
@@ -43,18 +46,18 @@
           <div class="why-chose-heading-text">
             <h2>Vad erbjuder byrån dig?</h2>
             <p>Vi på Kristoffes Resebyrå är alltid noga med att du som resenär ska känna din nöjd och lockad att resa. 
-              Vi jobbar hårt för att just din upplevelse ska vara unik! Därför pressenterar vi speciellt utvalda resemål som du
+              Vi jobbar hårt för att just din upplevelse ska vara unik! Därför pressenterar vi speciellt utvalda resemål som du som
               resenär får välja fritt emellan! Om du skulle hitta ett resmål du hellre åker till än de som pressenteras nedan, sköter 
               vi självklart allt åt dig ändå.
-              Vi har även en unik företagsidé som vi är stolta över. Kristoffers resebyrå betalar nämligen hela fadderullan, allt för att
+              Vi har även en unik företagsidé som vi är stolta över. Kristoffers resebyrå betalar nämligen hela fadderullan för två personer, allt för att
               du som resenär ska känna dig väl omhändertagen! Scrolla neråt för att se vad vi rekommenderar just nu!
             </p>
           </div>
         </div>
       </div>
-      <div class="travel-alt row">
+      <div class="travel-alt row paris">
         <div class="col-md-7 img-container">
-          <img src="./images/travels/paris.jpg" class="img img-fluid travel-img">
+          <img src="./images/travels/paris.jpg" class="img img-fluid travel-img" id="parisImg">
         </div>
         <div class="travel-content content col-md-5">
           <div class="paris-text">
@@ -64,7 +67,7 @@
                 åka till Paris. Detta vill vi hjälpa dig med! Vi har därför satt ihop ett paket vi tror du är intresserad av. Paketet innehåller följande.
               </p>
               <ul class="activity-list">
-                <li class="activity-item">Resa till och från staden</li>
+                <li class="activity-item ">Resa till och från staden</li>
                 <li class="activity-item">Hotellvistelse</li>
                 <li class="activity-item">Mysiga fik och fina middagar</li>
                 <li class="activity-item">Romantiska prommenader i staden och fina parker</li>
@@ -72,46 +75,79 @@
               </ul>
           </div>
         </div>
-        <div class="img-board-container row">
-          <img src="./images/travels/paris-boarder/cafe.jpg" class="img img-thumbnail board-img col-sm-2">
-          <img src="./images/travels/paris-boarder/city.png" class="img img-thumbnail board-img col-sm-3">
-          <img src="./images/travels/paris-boarder/dinner.jpg" class="img img-thumbnail board-img col-sm-2">
-          <img src="./images/travels/paris-boarder/flowers.jpg" class="img img-thumbnail board-img col-sm-3">
-          <img src="./images/travels/paris-boarder/food.jpg" class="img img-thumbnail board-img col-sm-2">
+        <div class="img-board-container row" mainImg="parisImg">
+          <img src="./images/travels/paris-boarder/cafe.jpg" class="img img-thumbnail board-img col-sm-2 shake-slow shake-freeze">
+          <img src="./images/travels/paris-boarder/city.png" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+          <img src="./images/travels/paris-boarder/dinner.jpg" class="img img-thumbnail board-img col-sm-2 shake-slow shake-freeze">
+          <img src="./images/travels/paris-boarder/flowers.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+          <img src="./images/travels/paris-boarder/food.jpg" class="img img-thumbnail board-img col-sm-2 shake-slow shake-freeze">
         </div>
       </div>
       
       <div class="travel-alt row">
         <div class="col-md-7 img-container">
-          <img src="./images/travels/lofoten.jpg" class="img img-fluid travel-img">     
+          <img src="./images/travels/lofoten.jpg" class="img img-fluid travel-img" id="norwayImg">     
         </div>    
         <div class="travel-content content col-md-5">
           <div class="norway-text">
             <h2>Norge</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>
+              Vårt grannland är inte bara bra på att åka skidor. De kan det där med natur också. Som man kan läsa i 
+              “Liftarens guide till galaxen” så har Norge och fjordarna fått pris för sin design.
+              Denna natursköna semesterupplevelse garanterar rosiga kinder, vind i håret, bra sömn och bra aptit! 
+              Beroende på när man väljer att utföra denna resa rekommenderar vi på Kristoffers resebyrå att man bland 
+              annat företa sig följande: 
+              </p>
+              <ul class="activity-list">
+                <li class="activity-item">Norrskensjakt, kanske med båt?</li>              
+                <li class="activity-item">Havssafari,</li>
+                <li class="activity-item">Toppturer, antingen till fots eller med skidor under fötterna. En matsäck smakar garanterat smaskens uppe på ett berg.</li>
+                <li class="activity-item">En tur med kajaken</li>
+                <li class="activity-item">En långpromenad i den vackra naturen.</li>
+                <li class="activity-item">En fisketur i norges rika vatten</li>
+              </ul>
+              <p>
+                Men vart i norge kan jag hitta allt detta fantastiska? Kristoffers resebyrå har två förslag, 
+                men om resenärerna har egna förslag så sköter resebyrån såklart även det. 
+              </p>
+              <ul>
+                <li class="activity-item "><a href="https://lofoten.info/lofoten" class="shake-slow shake-freeze">Lofoten</a></li>
+                <li class="activity-item"><a href="https://www.visittromso.no/en" class="shake-slow" shake-freeze>Tromsö</a></li>
+              </ul>
           </div>
         </div>
-        <div class="img-board-container row">
-            <img src="./images/travels/norway-board/tromso-summer.jpg" class="img img-thumbnail board-img col-sm-3">
-            <img src="./images/travels/norway-board/kayak.jpg" class="img img-thumbnail board-img col-sm-3">
-            <img src="./images/travels/norway-board/northernlight.jpg" class="img img-thumbnail board-img col-sm-3">
-            <img src="./images/travels/norway-board/fish.jpg" class="img img-thumbnail board-img col-sm-3">
+        <div class="img-board-container row" mainImg="norwayImg">
+            <img src="./images/travels/norway-board/tromso-summer.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+            <img src="./images/travels/norway-board/kayak.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+            <img src="./images/travels/norway-board/northernlight.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+            <img src="./images/travels/norway-board/fish.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
             
           </div>
       </div>
 
-      <div class="travel-alt row">
+      <div class="travel-alt row skiing">
         <div class="col-md-7 img-container">
-          <img src="./images/travels/winter.jpg" class="img img-fluid travel-img">    
+          <img src="./images/travels/winter.jpg" class="img img-fluid travel-img" id="skiingImg">    
         </div>              
         <div class="travel-content content col-md-5">
           <div class="skiing-text">
             <h2>Skidsemester</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>
+              -5 och solsken eller +/- 0 och snö. Det spelar inte så stor roll. En dag i backen är alltid rolig! 
+              Ni beger er norrut, bor i en mysig stuga, hinkar varm choklad som om det inte fanns någon morgondag, och åker skidor
+              för glatta livet. Kanske en after-ski och en helstekt ren på kvällen? Ni kanske tillomed bjuder med några vänner?
+              Men vart bär det av då? Detta val får resenärerna tillsammans bestämma. Men Kristoffers resebyrå föreslår Kittelfjäll, 
+              vilket brukar vara populärt hos våra resenärer. Kittelfjäll ligger dryga trettio mil nordväst om staden Umeå och är känt för sina
+              berg, sin snösäkerhet och fina omgivningar.
+            </p>
           </div>
         </div>
-        <div class="spacer row">
-          <div class="col-md-12">Stoppa in en bild-boarder här!</div>
+        <div class="img-board-container row" mainImg="skiingImg">
+          <img src="./images/travels/skiing-board/house.jpg" class="img img-thumbnail board-img col-sm-2 shake-slow shake-freeze">
+          <img src="./images/travels/skiing-board/kittelfjall-mountains.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+          <img src="./images/travels/skiing-board/party.jpg" class="img img-thumbnail board-img col-sm-2 shake-slow shake-freeze">
+          <img src="./images/travels/skiing-board/skiing.jpg" class="img img-thumbnail board-img col-sm-3 shake-slow shake-freeze">
+          <img src="./images/travels/skiing-board/slalom.jpg" class="img img-thumbnail board-img col-sm-2 shake-slow shake-freeze">
         </div>
       </div>
 
@@ -119,11 +155,35 @@
         <div class="col-md-7 img-container">           
           <img src="./images/travels/beach.jpg" class="img img-fluid travel-img">   
         </div>                                         
-        <div class="travel-content content col-md-5 order-2 should-refurnish-text-content">
+        <div class="travel-content content col-md-5 should-refurnish-text-content">
           <div class="sun-text">
             <h2>Solsemester</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>
+              Från snö och hurterier till sommar och sol. Ni reser till ett soligt turistparadis och njuter av lata dagar på stranden, 
+              svalkar er med en drink och har det allmänt gott. Till detta resealternativ har resebyrån inte några förslag, men sponsrar
+              självklart på samma vilkor vart ni än åker
+            </p>
           </div>
+        </div>
+      </div>
+
+
+      <div class="footer row">
+        <div class="col-md-5">
+          <div class="footer-text">
+            <h2>Vår VD vill önska dig en skön resa!</h2>
+            <p>Kristoffer, VD på Kristoffers resebyrå ser fram mot att få hjälpa just dig med din resa.
+              När du har bestämt vart du vill åka behöver du bara höra av dig till honom, så löser han allt!
+              Han kan också vara med som ett bollplank om du behöver hjälp att bestämma datum eller resmål.
+              Han vill också påminna om att byråns framtagna förslag är just förslag. Resebyrån ordnar resor över hela världen!
+            </p>
+          </br>
+          <p><a href="tel:0702871236">Ring VD, Kristoffer <i class="material-icons">phone</i></a> 
+          </p>
+          </div>
+        </div>
+        <div class="col-md-7 img-container">
+          <img src="./images/director.JPG" class="img img-fluid travel-img director">
         </div>
       </div>
     </div>
