@@ -15,6 +15,7 @@ const initEvents = () => {
 			document.body.style.background = "none";
 			document.body.querySelector('.main-content').style.display = 'block';
 			document.body.querySelector('.travel-heading').style.animation = '1s ease-out 0s 1 dropHeader';
+			document.title = 'God Jul, Anna-Karin!'
 		} else {
 			form.input.classList.add('is-invalid');
 			form.input.style.backgroundColor = "#fc8585";
